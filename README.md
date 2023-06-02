@@ -179,28 +179,11 @@ A house that possesses most of the above variables will command a higher price i
 ### Simple Linear Regression
 #### Model 1 :Creating a Baseline
 
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                  price   R-squared:                       0.485
-Model:                            OLS   Adj. R-squared:                  0.485
-Method:                 Least Squares   F-statistic:                 1.658e+04
-Date:                Fri, 02 Jun 2023   Prob (F-statistic):               0.00
-Time:                        17:35:08   Log-Likelihood:            -2.4398e+05
-No. Observations:               17607   AIC:                         4.880e+05
-Df Residuals:                   17605   BIC:                         4.880e+05
-Df Model:                           1                                         
-Covariance Type:            nonrobust                                         
-===============================================================================
-                  coef    std err          t      P>|t|      [0.025      0.975]
--------------------------------------------------------------------------------
-const       -2.425e+04   4767.056     -5.086      0.000   -3.36e+04   -1.49e+04
-sqft_living   270.1629      2.098    128.757      0.000     266.050     274.276
-==============================================================================
-Omnibus:                     9589.607   Durbin-Watson:                   1.966
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):           147439.407
-Skew:                           2.281   Prob(JB):                         0.00
-Kurtosis:                      16.422   Cond. No.                     5.70e+03
-==============================================================================
+
+<img
+      src="https://github.com/Kelta153/dsc_phase-2_project/blob/main/images/m1.png"
+      style="display: inline-block; margin: 0 auto; max-width: 300px">
+      
 
 
 #### Model 1: Simple Linear Regression Results
@@ -218,31 +201,12 @@ $$ \hat{price} = -24,220 + 270.16 sqftliving $$
 
 ### Multiple linear regression
 ### Model 2: Columns with correlation >50% with 'price'
- OLS Regression Results                            
-==============================================================================
-Dep. Variable:                  price   R-squared:                       0.495
-Model:                            OLS   Adj. R-squared:                  0.495
-Method:                 Least Squares   F-statistic:                     5760.
-Date:                Fri, 02 Jun 2023   Prob (F-statistic):               0.00
-Time:                        17:35:11   Log-Likelihood:            -2.4380e+05
-No. Observations:               17607   AIC:                         4.876e+05
-Df Residuals:                   17603   BIC:                         4.876e+05
-Df Model:                           3                                         
-Covariance Type:            nonrobust                                         
-=================================================================================
-                    coef    std err          t      P>|t|      [0.025      0.975]
----------------------------------------------------------------------------------
-const         -8.744e+04   6539.196    -13.371      0.000      -1e+05   -7.46e+04
-bathrooms     -1084.4037   3733.935     -0.290      0.771   -8403.286    6234.479
-sqft_living     224.6080      3.982     56.412      0.000     216.804     232.412
-sqft_living15    80.5831      4.234     19.031      0.000      72.283      88.883
-==============================================================================
-Omnibus:                     9835.975   Durbin-Watson:                   1.967
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):           158715.082
-Skew:                           2.345   Prob(JB):                         0.00
-Kurtosis:                      16.941   Cond. No.                     1.11e+04
-==============================================================================
 
+<img
+      src="https://github.com/Kelta153/dsc_phase-2_project/blob/main/images/m2.png"
+      style="display: inline-block; margin: 0 auto; max-width: 300px">
+      
+ 
 #### Model 2 Results:
     The second Model built illustrates price as below:
 
@@ -269,33 +233,11 @@ We create a multiple linear regression by utilising all columns with the positiv
 
 We will exclude Bathrooms from this model as it is not statistically significant as per model 2.
 
-OLS Regression Results                            
-==============================================================================
-Dep. Variable:                  price   R-squared:                       0.550
-Model:                            OLS   Adj. R-squared:                  0.550
-Method:                 Least Squares   F-statistic:                     3592.
-Date:                Fri, 02 Jun 2023   Prob (F-statistic):               0.00
-Time:                        17:35:13   Log-Likelihood:            -2.4278e+05
-No. Observations:               17607   AIC:                         4.856e+05
-Df Residuals:                   17600   BIC:                         4.856e+05
-Df Model:                           6                                         
-Covariance Type:            nonrobust                                         
-=================================================================================
-                    coef    std err          t      P>|t|      [0.025      0.975]
----------------------------------------------------------------------------------
-const          4.208e+06   1.45e+05     28.966      0.000    3.92e+06    4.49e+06
-bedrooms      -5.735e+04   2460.576    -23.308      0.000   -6.22e+04   -5.25e+04
-sqft_living     272.4615      3.495     77.951      0.000     265.610     279.313
-condition      2.035e+04   2985.938      6.816      0.000    1.45e+04    2.62e+04
-yr_built      -2184.0993     72.242    -30.233      0.000   -2325.700   -2042.498
-is_renovated   9.443e+04   9325.958     10.125      0.000    7.61e+04    1.13e+05
-sqft_living15    94.5853      4.049     23.363      0.000      86.650     102.521
-==============================================================================
-Omnibus:                     9602.158   Durbin-Watson:                   1.962
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):           165242.016
-Skew:                           2.245   Prob(JB):                         0.00
-...
+https://github.com/Kelta153/dsc_phase-2_project/blob/main/images/m3.png
 
+<img
+      src="https://github.com/Kelta153/dsc_phase-2_project/blob/main/images/m3.png"
+      style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 #### Model 3  Results:
 The third Model built illustrates price as below:
@@ -317,32 +259,11 @@ $$ \hat{price} = 4,208,000 -57,350 bedrooms + 272.46 squarefootliving + 20,350 c
 
 ### Model 4: Log Transformed data
 For this model,  we log transformed our data to improve our final model. 
+<img
+      src="https://github.com/Kelta153/dsc_phase-2_project/blob/main/images/m4.png"
+      style="display: inline-block; margin: 0 auto; max-width: 300px">
 
- OLS Regression Results                            
-==============================================================================
-Dep. Variable:                  price   R-squared:                       0.458
-Model:                            OLS   Adj. R-squared:                  0.458
-Method:                 Least Squares   F-statistic:                     2480.
-Date:                Fri, 02 Jun 2023   Prob (F-statistic):               0.00
-Time:                        17:35:20   Log-Likelihood:            -2.4443e+05
-No. Observations:               17607   AIC:                         4.889e+05
-Df Residuals:                   17600   BIC:                         4.889e+05
-Df Model:                           6                                         
-Covariance Type:            nonrobust                                         
-=================================================================================
-                    coef    std err          t      P>|t|      [0.025      0.975]
----------------------------------------------------------------------------------
-const           2.81e+07   1.17e+06     23.979      0.000    2.58e+07    3.04e+07
-bedrooms      -2.016e+05   9178.617    -21.960      0.000    -2.2e+05   -1.84e+05
-sqft_living    5.157e+05   8530.382     60.450      0.000    4.99e+05    5.32e+05
-condition      5.466e+04   1.17e+04      4.677      0.000    3.18e+04    7.76e+04
-yr_built      -4.351e+06   1.56e+05    -27.850      0.000   -4.66e+06   -4.04e+06
-sqft_living15  2.408e+05   9142.891     26.342      0.000    2.23e+05    2.59e+05
-is_renovated   4313.6054    445.242      9.688      0.000    3440.888    5186.323
-==============================================================================
-Omnibus:                    11754.486   Durbin-Watson:                   1.953
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):           281587.942
-Skew:                           2.862   Prob(JB):                         0.00
+ 
 
 #### Model 4  Results:
 The log transfromed variables do not improve the fit of the model compared to model 3. 
